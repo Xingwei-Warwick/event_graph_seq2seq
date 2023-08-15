@@ -13,3 +13,5 @@ module purge
 module load GCCcore/11.3.0 CUDA/11.7.0
 
 srun python finetune_long_T5.py --model google/long-t5-tglobal-base --batch 16 --aug 5 --train-path data/NYT_des_train.json --test-path data/NYT_des_test.json --epoch 10
+
+srun python eval_nyt_only.py
